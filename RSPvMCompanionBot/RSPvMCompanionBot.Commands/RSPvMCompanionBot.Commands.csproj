@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{212F04C3-4E6C-491B-8430-24E18B3CD33C}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>RSPvMCompanionBot.Commands</RootNamespace>
     <AssemblyName>RSPvMCompanionBot.Commands</AssemblyName>
@@ -46,7 +46,7 @@
     <Compile Include="Command.cs" />
     <Compile Include="ArgumentData.cs" />
     <Compile Include="ArgumentDataMatches.cs" />
-    <Compile Include="CommandDecomposer.cs" />
+    <Compile Include="InputDecomposer.cs" />
     <Compile Include="CommandRecognizer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

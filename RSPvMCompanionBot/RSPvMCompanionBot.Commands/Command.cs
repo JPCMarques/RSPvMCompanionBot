@@ -8,15 +8,17 @@ namespace RSPvMCompanionBot.Commands
 {
     public abstract class Command<TReturn>
     {
-        protected string Root;
-        protected ArgumentData ArgumentData;
+        public string Root;
+        public ArgumentSpecification ArgSpec;
+        public ArgumentData ArgData;
 
-        public Command(string root, ArgumentData argumentData)
+        public Command(string root, ArgumentSpecification argSpec)
         {
             Root = root;
-            ArgumentData = argumentData;
+            ArgSpec = argSpec;
         }
 
+        protected abstract void AssignArgumentSpecifications();
         public abstract TReturn Execute();
     }
 }
