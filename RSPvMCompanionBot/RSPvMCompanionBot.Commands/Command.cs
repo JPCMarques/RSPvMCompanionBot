@@ -9,17 +9,12 @@ namespace RSPvMCompanionBot.Commands
     public abstract class Command<TReturn>
     {
         protected string Root;
-        protected string[] Args;
-        protected string[] OptArgs;
-        protected int MinArgs, MaxArgs;
+        protected ArgumentData ArgumentData;
 
-        public Command(string root, int minArgs = 0, int maxArgs = 0, string[] args = null, string[] optArgs = null)
+        public Command(string root, ArgumentData argumentData)
         {
             Root = root;
-            MinArgs = minArgs;
-            MaxArgs = maxArgs;
-            Args = args;
-            OptArgs = optArgs;
+            ArgumentData = argumentData;
         }
 
         public abstract TReturn Execute();
